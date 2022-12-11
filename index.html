@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather - Modern JavaScript</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="css/styles.css" rel="stylesheet">
+    <link href="css/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mx-auto max-h-full">
+        <h1 id="titulo" class="text-4xl pt-5 text-white font-bold uppercase text-center">Search the Weather</h1>
+        <div class="flex flex-col md:flex-row mx-auto max-h-full">
+            <div class="md:block md:w-1/2 lg:w-2/5">
+                <div class="p-6 mt-2">
+                    <div>
+                        <p class="text-center text-white mt-6">Add your city and select the country</p>
+                    </div>
+                </div>
+                
+                <form id="formular" class="flex justify-center gap-2 mx-2" action="#" method="POST">
+                    <div class="mt-5">
+                        <input 
+                            type="text" 
+                            name="city"
+                            id="city"
+                            placeholder="Write your city"
+                            class="p-2 rounded border border-gray-200"
+                        />
+                    </div>
+                    <div class="mt-5">
+                        <select 
+                            class="block appearance-none bg-gray-200 border border-gray-200 text-gray-700 py-2 px-2 pr-8 rounded focus:outline-none focus:bg-white focus:border-gray-500" 
+                            id="country"
+                        >
+                            <option disabled selected value="">-- Select --</option>
+                            
+                        </select>
+                    </div>
+                    <button class="mt-5 bg-yellow-500 p-2 uppercase font-bold cursor-pointer rounded" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+                </form>
+                <div class="p-6 mt-5">
+                    <div id="result">
+                        
+                    </div>
+                </div>
+
+            </div>
+            <div class="hidden md:w-1/2 lg:w-3/5 md:mx-5 md:mt-5 lg:mt-10" id="wind-hide">
+                <h2 class="font-bold text-white text-center text-2xl uppercase mt-5">Today's Highlights</h2>
+                <div class="flex flex-col lg:flex-row gap-3 lg:gap-1 mt-5 mb-5">
+                    <div class="flex lg:flex-1 lg:flex-col items-center gap-5 justify-center lg:grow mx-5 bg-white shadow-md px-5 py-2 lg:py-5 rounded-lg text-center" id="wind-speed">
+                        <div><i class="fa-solid fa-wind text-5xl text-blue-600"></i></div>
+                        <p class="font-bold uppercase my-2 my-5">Wind Speed</p>
+                    </div>
+                    <div class="flex lg:flex-1 lg:flex-col items-center gap-5 justify-center lg:grow mx-5 bg-white shadow-md px-5 py-2 lg:py-5 rounded-lg text-center" id="humidity">
+                        <div><i class="fa-solid fa-droplet text-5xl text-blue-600"></i></div>
+                        <p class="font-bold uppercase my-2 my-5">Humidity</p>
+                    </div>
+                    <div class="flex lg:flex-1 lg:flex-col items-center gap-5 justify-center lg:grow mx-5 bg-white shadow-md px-5 py-2 lg:py-5 rounded-lg text-center" id="feels-like">
+                        <div class="overflow-hidden">
+                            <i class="fa-solid fa-temperature-three-quarters text-5xl text-blue-600"></i>
+                        </div>
+                        <p class="font-bold uppercase my-2 my-5">Feels-like</p>
+                    </div>
+                </div>
+                <div class="flex flex-row justify-between mx-5 bg-white shadow-md px-5 rounded-lg" id="Sun-time">
+                    <div class="mx-5 bg-white px-5 py-2 lg:py-5 text-center" id="sun-rise">
+                        <div><i class="fa-solid fa-sun h-5 text-5xl overflow-hidden text-yellow-400 "></i></div>
+                        <p class="font-bold uppercase my-2">Sunrise Time</p>
+                    </div>
+                    <div class="mx-5 bg-white px-5 py-2 lg:py-5 text-center" id="sun-set">
+                        <div><i class="fa-solid fa-sun h-5 text-5xl overflow-hidden text-orange-500"></i></div>
+                        <p class="font-bold uppercase my-2" >Sunset Time</p>
+                    </div>
+                </div>
+            </div>
+     
+        </div>
+    </div>
+    <footer class="sticky mt-10 mb-2 lg:mb-1"><p class="text-center text-white">Created by <a href="https://ismeldaguerra.de" target="_blank" class="font-bold underline">Ismelda Guerra</a> @2022</p></footer>
+    <script src="js/app.js"></script>
+</body>
+</html>
